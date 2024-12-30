@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Voting System</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container" id="login-page">
+        <h1>Login</h1>
+        <input type="text" id="aadhaar" placeholder="Enter 12-digit Aadhaar" maxlength="12">
+        <input type="password" id="password" placeholder="Enter Password">
+        <button onclick="login()">Login</button>
+    </div>
+
+    <div class="container hidden" id="voting-page">
+        <h1>Vote for a Candidate</h1>
+        <div id="candidates">
+            <button onclick="vote(1)" class="disabled" disabled>Candidate 1</button>
+            <button onclick="vote(2)" class="disabled" disabled>Candidate 2</button>
+            <button onclick="vote(3)" class="disabled" disabled>Candidate 3</button>
+            <button onclick="vote(4)" class="disabled" disabled>Candidate 4</button>
+            <button onclick="vote(5)" class="disabled" disabled>Candidate 5</button>
+        </div>
+    </div>
+
+    <div class="container hidden" id="thank-you-page">
+        <h1 id="thank-you-message"></h1>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
